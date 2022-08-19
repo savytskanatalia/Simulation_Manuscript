@@ -1,4 +1,8 @@
 # Simulation, human
+library(polyester)
+library(seqinr)
+library(tidyr)
+library(stringr)
 
 # SECTION 1
 # Read in Genes expressed in Substantia nigra from GTEx 8
