@@ -65,7 +65,7 @@ GRCh38_all<-GRCh38_all[order(GRCh38_all$V2,decreasing=TRUE),]
 # Remove duplicates - retain only first-longest transcript- instance for each gene
 GRCh38_all<-GRCh38_all[!(duplicated(GRCh38_all$trangenescript)),]
 
-# Set seed and subset to 12000 genes
+# Set seed and subset to 13000 genes
 set.seed(25)
 Expressed_genes<-GRCh38_all[GRCh38_all$trangenescript %in% sample(GRCh38_all$trangenescript,size=13000),]
 # Assign FC of 1 to two new columns- sample groups
