@@ -11,7 +11,7 @@ GTEx_v8_median_tpm <- read.delim("GTEx_v8_RNASeQCv1.1.9_Substantia_nigra_gene_me
 GTEx_v8_median_tpm<-GTEx_v8_median_tpm[order(GTEx_v8_median_tpm$Brain...Substantia.nigra,decreasing=TRUE),]
 # Remove everything in gene IDs after .
 GTEx_v8_median_tpm$Name<- sub("*\\.[0-9]", "", GTEx_v8_median_tpm$Name)
-# Subsample top 12000 expressed genes
+# Subsample top 13000 expressed genes
 GTEx_v8_median_tpm<-GTEx_v8_median_tpm[1:13000,]
 # Write out IDs for preparing .fa with transcripts derived from these genes
 write.csv(GTEx_v8_median_tpm$Name,"Substantia_nigra_HS.ID",row.names = FALSE,quote=FALSE)
