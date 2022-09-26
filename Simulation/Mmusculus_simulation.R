@@ -217,5 +217,5 @@ fc_count='Mmusculus_stranded/foldchange_for_sim.txt'
 fold <- read.delim(fc_count, header=TRUE, stringsAsFactors=FALSE)
 
 fold_m<-as.matrix(fold[,c(2,3)])
-
+# gains equivalent results to the previous simulation in regards to library size and read sim - 2*readspertx and 0.5 library == readspertx and 1. library
 simulate_experiment(fasta=fasta, gtf=NULL, seqpath=NULL, num_reps=c(5,5), reads_per_transcript=2*readspertx, fold_changes=fold_m, gzip=TRUE, paired=TRUE, seed=25, strand_specific=TRUE, gzip=TRUE,lib_sizes=c(0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5),outdir='Mmusculus_stranded/raw')
