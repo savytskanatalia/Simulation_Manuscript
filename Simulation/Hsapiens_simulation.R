@@ -49,8 +49,7 @@ write.table(GRCh38_rmsk_TEinst_modified_complete_sorted,'HS_TE_forSimulation.bed
 
 
 
-# For genes; load the transcript ID file for substantia nigra; subset random 2000 genes to be overexpressed and 2000 to be downregulated; assign same logFC to multiple transcripts of individual genes
-# Subset and get only longest transcripts for each gene
+# For genes; load the transcript ID file for substantia nigra; subset random 2000 genes to be overexpressed and 2000 to be downregulated; 
 # 
 
 GRCh38_all <- read.delim("GRCh38_genes_lncRNAs_RepMask.fa.fai", header=FALSE)
